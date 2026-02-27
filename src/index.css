@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .form-content label {
+    @apply w-full text-xl font-medium;
+  }
+  .form-content input {
+    @apply w-full border-2 border-black placeholder:text-[#39394373] placeholder:text-base mt-2 mb-2 py-3 pl-4 rounded-lg outline-black/10;
+  }
+
+  .form-content .password-wrapper {
+    @apply relative;
+  }
+  .form-content .password-wrapper span {
+    @apply absolute right-2 bottom-5;
+  }
+}
