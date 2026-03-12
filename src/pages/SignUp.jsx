@@ -40,7 +40,7 @@ function SignUp() {
   }
 
   return (
-    <div className="flex h-screen">
+    <div className="flex min-h-screen">
       <SignUpIllustration />
       <div className="md:w-3/4 mx-auto">
         <div className="mx-auto py-9 w-3/4 max-w-[530px] space-y-6">
