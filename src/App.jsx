@@ -7,6 +7,9 @@ import Terms from "./pages/Terms";
 import ForgotPassword from "./pages/ForgotPassword";
 import MainApp from "./pages/MainApp";
 import Dashboard from "./components/app/Dashboard";
+import CreateRequest from "./components/app/CreateRequest";
+import Notification from "./components/app/Notification";
+import Settings from "./components/app/Settings";
 
 // const Homepage = lazy(() => import("./pages/Homepage"));
 
@@ -32,7 +35,7 @@ const router = createBrowserRouter([
     element: <ForgotPassword />,
   },
   {
-    path: "/main-app",
+    path: "/home",
     element: <MainApp />,
     children: [
       {
@@ -42,6 +45,18 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "request",
+        element: <CreateRequest />,
+      },
+      {
+        path: "notifications",
+        element: <Notification />,
+      },
+      {
+        path: "settings",
+        element: <Settings />,
       },
     ],
   },

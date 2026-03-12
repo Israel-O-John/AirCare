@@ -49,7 +49,7 @@ function NavBar({}) {
 
         {/* Mobile Nav */}
         {isMenu && (
-          <nav className="absolute top-full left-0 right-0 border-b md:hidden bg-white">
+          <nav className="absolute top-full left-0 right-0 border-b md:hidden bg-white h-screen">
             <ul className="container mx-auto px-4 py-2 flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <li
@@ -60,7 +60,7 @@ function NavBar({}) {
                   <a href={link.href}> {link.name}</a>
                 </li>
               ))}
-              <div className="flex justify-between items-center flex-wrap gap-2">
+              <div className="flex justify-between items-center flex-wrap gap-2 mt-auto">
                 <Link to="/login" className="text-blue-700">
                   Log In
                 </Link>

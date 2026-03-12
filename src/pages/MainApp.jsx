@@ -1,16 +1,19 @@
-import { Link, Outlet } from "react-router-dom";
-import Dashboard from "../components/app/Dashboard";
+import { Outlet } from "react-router-dom";
+import SideBar from "../components/app/SideBar";
+import IconBar from "../components/app/IconBar";
+import { useState } from "react";
 
 function MainApp() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div>
-      <Link to="/" className="text-6xl hover:text-blue-400 m-5 ">
-        &#8598;
-      </Link>
-      <Outlet />
-      <Link to="dashboard" className="text-6xl hover:text-blue-400 m-5 ">
-        &rarr;
-      </Link>
+    <div className="bg-gray-100  min-h-screen">
+      <div className="max-w-[1440px] mx-auto lg:flex">
+        <SideBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <div className="bg-gray-100/50 flex-1 px-6 py-2">
+          <IconBar setSidebarOpen={setSidebarOpen} />
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 }

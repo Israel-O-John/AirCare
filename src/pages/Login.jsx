@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SignUpIllustration from "../components/ui/SignUpIllustration";
-import { Eye, EyeClosed, EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   function toggleShowPassword() {
     setShowPassword(!showPassword);
@@ -15,7 +16,7 @@ function Login() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(e);
+    navigate("/home");
   }
 
   return (

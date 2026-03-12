@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SignUpIllustration from "../components/ui/SignUpIllustration";
 import { Eye, EyeClosed, EyeOff } from "lucide-react";
 import { useState } from "react";
@@ -12,6 +12,8 @@ function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   function toggleShowPassword() {
     setShowPassword(!showPassword);
@@ -34,8 +36,7 @@ function SignUp() {
       setPassword("");
       setConfirmPassword("");
     }
-
-    console.log(e);
+    navigate("/home");
   }
 
   return (

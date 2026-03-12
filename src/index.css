@@ -26,4 +26,62 @@
   .form-content .password-wrapper span {
     @apply absolute right-2 bottom-5;
   }
+
+  .home-nav a {
+    @apply flex gap-4 items-center  py-2 pl-3 w-10/12 rounded-md text-black;
+  }
+
+  .home-nav .log-out {
+    @apply text-red-600;
+  }
+
+  .home-nav .log-out:hover {
+    @apply bg-inherit text-red-600;
+  }
+  .home-nav .log-out:focus {
+    @apply bg-inherit text-red-600;
+  }
+
+  .home-nav a:hover {
+    @apply text-white bg-blue-700;
+  }
+
+  .home-nav a.active {
+    @apply text-white bg-blue-700;
+  }
+
+  .request {
+    @apply flex items-center gap-3 shadow-[4px_4px_8px_0px_#00000040] md:px-16 justify-center py-4 rounded-2xl bg-white border;
+  }
+
+  .request p {
+    @apply font-light;
+  }
+
+  .request h4 {
+    @apply text-2xl font-semibold;
+  }
+
+  .request-form div {
+    @apply flex  flex-col gap-2;
+  }
+
+  .request-form label,
+  .form-group label {
+    @apply font-normal  md:text-xl text-[#393943] mt-2;
+  }
+
+  .request-form input,
+  .request-form select,
+  .form-group input {
+    @apply border border-[#393943] rounded-md bg-[#FAFAFA] px-4 py-2 placeholder:text-[#393943] placeholder:font-light outline-none;
+  }
+
+  .request-form option {
+    @apply text-[#393943] font-light;
+  }
+
+  .form-group {
+    @apply flex flex-col gap-2 mx-auto w-full;
+  }
 }
